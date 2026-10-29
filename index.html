@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile - CIT2011</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header>
+    <h1>University of Technology, Jamaica</h1>
+    <p>Student Profile Page</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Me -->
+  <section id="home">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="profile-box">
+        <img src="images/me gin.jpg" alt="Photo of the student" width="140" height="140">
+        <div>
+          <p><span class="tag">Name</span> Joseph Rochester</p>
+          <p><span class="tag">Programme</span> BSc Computer Networking and Security</p>
+          <p><span class="tag">Year</span> Year 5</p>
+          <p>
+            I am a Fifth year student at UTech Jamaica, studying Cybersecuirty.
+            I enjoy web development and I am currently
+            learning how HTML and CSS work together to build a page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Courses -->
+    <section id="courses">
+      <h2>My Courses</h2>
+      <ul>
+        <li>CIT2011 Web Programming</li>
+        <li>CNS4001 Security Analysis &amp; Response</li>
+        <li>MATH1140 Discrete Mathematics</li>
+      </ul>
+    </section>
+
+    <!-- Weekly Schedule -->
+    <section id="schedule">
+      <h2>Weekly Schedule</h2>
+      <table>
+        <caption>Class times for this semester</caption>
+        <thead>
+          <tr><th>Course</th><th>Day</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Course">CIT2011</td><td data-label="Day">Monday</td><td data-label="Time">9:00am - 10:50am</td></tr>
+          <tr><td data-label="Course">CNS4001</td><td data-label="Day">Tuesday</td><td data-label="Time">1:00pm - 2:50pm</td></tr>
+          <tr><td data-label="Course">MATH1140</td><td data-label="Day">Wednesday</td><td data-label="Time">11:00am - 12:50pm</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <!-- Contact Me -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Joseph Rochester &copy; 2026 CIT2011, University of Technology, Jamaica</p>
+  </footer>
+
+</div>
+</body>
+</html>

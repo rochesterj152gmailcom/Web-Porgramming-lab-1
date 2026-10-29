@@ -1,0 +1,138 @@
+/* ---- base ---- */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* ---- header ---- */
+header {
+  background: #1f4e79;
+  color: #fff;
+  padding: 16px 20px;
+  text-align: center;
+}
+header h1 { margin: 0; font-size: 1.6em; }
+header p { margin: 4px 0 0; font-size: 0.95em; }
+
+/* ---- nav ---- */
+nav {
+  background: #163a56;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-weight: bold;
+}
+nav a:hover { background: #2a6490; }
+
+/* ---- sections ---- */
+section {
+  padding: 18px 20px;
+  border-bottom: 1px solid #ddd;
+}
+section h2 {
+  color: #1f4e79;
+  border-bottom: 2px solid #1f4e79;
+  padding-bottom: 4px;
+}
+
+/* ---- about me ---- */
+#about .profile-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+#about img {
+  border-radius: 50%;
+  border: 3px solid #1f4e79;
+}
+.tag {
+  display: inline-block;
+  background: #e8f0f8;
+  color: #1f4e79;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.85em;
+  margin-right: 6px;
+}
+
+/* ---- courses ---- */
+#courses ul { padding-left: 20px; }
+#courses li { margin-bottom: 6px; }
+
+/* ---- schedule table ---- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+caption { text-align: left; font-weight: bold; margin-bottom: 6px; }
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th { background: #1f4e79; color: #fff; }
+tr:nth-child(even) td { background: #f0f4f8; }
+
+/* ---- contact form ---- */
+form { display: flex; flex-direction: column; max-width: 420px; }
+label { margin-top: 10px; font-weight: bold; }
+input, textarea {
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: inherit;
+}
+button {
+  margin-top: 14px;
+  padding: 10px;
+  background: #1f4e79;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 140px;
+}
+button:hover { background: #2a6490; }
+
+/* ---- footer ---- */
+footer {
+  background: #163a56;
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 0.9em;
+}
+
+/* ---- responsive: mobile ---- */
+@media (max-width: 480px) {
+  header h1 { font-size: 1.3em; }
+  nav a { padding: 8px 10px; font-size: 0.9em; }
+  #about .profile-box { flex-direction: column; align-items: center; text-align: center; }
+  table, thead, tbody, th, td, tr { display: block; }
+  thead tr { display: none; }
+  td { border: none; border-bottom: 1px solid #ccc; padding-left: 45%; position: relative; }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 8px;
+    font-weight: bold;
+    color: #1f4e79;
+  }
+  form { max-width: 100%; }
+}
